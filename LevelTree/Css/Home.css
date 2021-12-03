@@ -15,6 +15,28 @@ body {
   margin: 0;
 }
 
+/* Nav  optionally */
+.Nav {
+    display: flex;
+    margin: auto;
+  }
+  
+  .Nav .title-font {
+    justify-content: center;
+    margin: auto;
+  }
+  .Nav #logoBrightest {
+    margin: auto;
+    width: 200px;
+    height: 130px;
+    /* box-shadow: 0 -130px 180px 150px rgba(255, 255, 0, 0.6); sun background light*/
+    filter: drop-shadow(5px 5px 5px #222) blur(0.4px);
+    border-radius: 0px 0px 20px 20px;
+    border: 1px black solid;
+    margin: auto;
+  }
+  
+
 /*Boom*/
 #container-tree {
   display: flex;
