@@ -18,6 +18,7 @@ body {
 
 /* Nav  optionally */
 .Nav {
+<<<<<<< HEAD
     display: flex;
     margin: auto;
   }
@@ -37,6 +38,8 @@ body {
     margin: auto;
   }
 
+=======
+>>>>>>> e63880a670efa355aeff734091e581fc06b79f83
 
 /*Boom*/
 #container-tree {
@@ -53,7 +56,6 @@ body {
 }
 
 /*Levels*/
-#level1{
   position: absolute;
   z-index: 1;
   background-color: rgba(206, 0, 0, 0.4);
@@ -159,9 +161,7 @@ body {
 /*Legende onderaan op de pagina*/
 footer {
   width: 100%;
-  background-color: #F4C709;
 }
-#legende{
   display: flex;
   justify-content: space-evenly;
   padding: 15px 0px;
@@ -181,20 +181,16 @@ footer {
   height: 35px;
   background-color: #ededed;
 }
-.circle-legende{
   width: 15px;
   height: 15px;
   border: 1px solid black;
   border-radius: 10px;
   margin-right: 20px;
-  background-color: #63B330;
 }
 .manual-legende-circle {
-  background-color: #63B330;
 }
 .technical-legende-circle {
   background-color: red;
 }
-.lead-legende-circle{
   background-color: blue;
 }
