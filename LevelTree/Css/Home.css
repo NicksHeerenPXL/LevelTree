@@ -1,18 +1,29 @@
 * {
-    font-family: 'Nunito', Arial;
-    box-sizing: border-box;
+  font-family: "Nunito", Arial;
+  box-sizing: border-box;
+  background-color: #ededed;
 }
 .title-font {
-    font-weight: bold;
+  font-weight: bold;
 }
 .text-font {
-    font-style: italic;
+  font-style: italic;
+}
+
+body {
+  display: block;
+  margin: 0;
+}
+
+#test {
+  display: flex;
+  justify-content: center;
+  /* border: 1px black solid; */
 }
 
 #tree {
-    background-color: red;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 70%;
-    max-width: 1200px;
+  /* width: 70%;
+    max-width: 1200px; */
+  width: auto;
+  height: 750px;
 }
