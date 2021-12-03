@@ -76,8 +76,7 @@ body {
   .sky {
     height: 100vh;
     width: 100%;
-    /*background: linear-gradient(to bottom, #cdefff, #84adff);*/
-      background-color: white;
+    background: linear-gradient(to bottom, #cdefff, #84adff);
 
     overflow: hidden;
   }

@@ -1,0 +1,10 @@
+* {
+    font-family: 'Nunito', Arial;
+    box-sizing: border-box;
+}
+.title-font {
+    font-weight: bold;
+}
+.text-font {
+    font-style: italic;
+}
