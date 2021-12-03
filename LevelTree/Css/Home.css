@@ -15,7 +15,8 @@ body {
   margin: 0;
 }
 
-#test {
+/*Boom*/
+#container-tree {
   display: flex;
   justify-content: center;
   /* border: 1px black solid; */
@@ -26,4 +27,46 @@ body {
     max-width: 1200px; */
   width: auto;
   height: 750px;
+}
+/*Legende onderaan op de pagina*/
+footer {
+  width: 100%;
+  background-color: #F4C709;
+}
+#legende{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 0px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(244, 199, 9);
+}
+.item-legende {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 0px 10px;
+  margin: 0;
+  height: 35px;
+  background-color: #ededed;
+}
+.circle-legende{
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right: 20px;
+  background-color: #63B330;
+}
+.manual-legende-circle {
+  background-color: #63B330;
+}
+.technical-legende-circle {
+  background-color: red;
+}
+.lead-legende-circle{
+  background-color: blue;
 }
