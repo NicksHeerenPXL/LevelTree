@@ -17,25 +17,25 @@ body {
 
 /* Nav  optionally */
 .Nav {
-    display: flex;
-    margin: auto;
-  }
-  
-  .Nav .title-font {
-    justify-content: center;
-    margin: auto;
-  }
-  .Nav #logoBrightest {
-    margin: auto;
-    width: 200px;
-    height: 130px;
-    /* box-shadow: 0 -130px 180px 150px rgba(255, 255, 0, 0.6); sun background light*/
-    filter: drop-shadow(5px 5px 5px #222) blur(0.4px);
-    border-radius: 0px 0px 20px 20px;
-    border: 1px black solid;
-    margin: auto;
-  }
-  
+  display: flex;
+  margin: auto;
+}
+
+.Nav .title-font {
+  justify-content: center;
+  margin: auto;
+}
+.Nav #logoBrightest {
+  margin: auto;
+  width: 200px;
+  height: 130px;
+  background-color: #ededed00;
+  /* box-shadow: 0 -130px 180px 150px rgba(255, 255, 0, 0.6); sun background light*/
+  filter: drop-shadow(5px 4px 10px #222) blur(0.4px);
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 1px 3px rgba(160, 149, 149, 0.671) inset;
+  margin: auto;
+}
 
 /*Boom*/
 #container-tree {
@@ -52,7 +52,7 @@ body {
 }
 
 /*Levels*/
-#level1{
+#level1 {
   position: absolute;
   z-index: 1;
   background-color: rgba(206, 0, 0, 0.4);
@@ -64,9 +64,9 @@ body {
 /*Legende onderaan op de pagina*/
 footer {
   width: 100%;
-  background-color: #F4C709;
+  background-color: #f4c709;
 }
-#legende{
+#legende {
   display: flex;
   justify-content: space-evenly;
   padding: 15px 0px;
@@ -86,20 +86,20 @@ footer {
   height: 35px;
   background-color: #ededed;
 }
-.circle-legende{
+.circle-legende {
   width: 15px;
   height: 15px;
   border: 1px solid black;
   border-radius: 10px;
   margin-right: 20px;
-  background-color: #63B330;
+  background-color: #63b330;
 }
 .manual-legende-circle {
-  background-color: #63B330;
+  background-color: #63b330;
 }
 .technical-legende-circle {
   background-color: red;
 }
-.lead-legende-circle{
+.lead-legende-circle {
   background-color: blue;
 }
