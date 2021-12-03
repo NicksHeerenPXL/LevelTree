@@ -4,7 +4,7 @@
   background-color: #ededed;
 }
 .title-font {
-  font-weight: bold;
+  font-weight: bolder;
 }
 .text-font {
   font-style: italic;
@@ -27,6 +27,17 @@ body {
     max-width: 1200px; */
   width: auto;
   height: 750px;
+}
+
+/*Levels*/
+#level1{
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(206, 0, 0, 0.4);
+  width: 10px;
+  height: 10px;
+  margin-left: 57%;
+  margin-top: 30.2%;
 }
 /*Legende onderaan op de pagina*/
 footer {
