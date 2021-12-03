@@ -8,3 +8,11 @@
 .text-font {
     font-style: italic;
 }
+
+#tree {
+    background-color: red;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    max-width: 1200px;
+}
