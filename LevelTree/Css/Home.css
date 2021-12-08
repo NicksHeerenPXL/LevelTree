@@ -40,25 +40,25 @@ footer {
 
 /* Nav  optionally */
 .Nav {
-  display: flex;
-  margin: auto;
-}
+    display: flex;
+    margin: auto;
+  }
 
-.Nav .title-font {
-  justify-content: center;
-  margin: auto;
-}
-.Nav #logoBrightest {
-  margin: auto;
-  width: 120px;
-  height: 100px;
-  background-color: #ededed00;
-  /* box-shadow: 0 -130px 180px 150px rgba(255, 255, 0, 0.6); sun background light*/
-  filter: drop-shadow(5px 4px 10px #222) blur(0.4px);
-  border-radius: 0px 0px 20px 20px;
-  box-shadow: 0px 1px 3px rgba(160, 149, 149, 0.671) inset;
-  margin: auto;
-}
+  .Nav .title-font {
+    justify-content: center;
+    margin: auto;
+  }
+  .Nav #logoBrightest {
+    margin: auto;
+    width: 200px;
+    height: 130px;
+    /* box-shadow: 0 -130px 180px 150px rgba(255, 255, 0, 0.6); sun background light*/
+    filter: drop-shadow(5px 5px 5px #222) blur(0.4px);
+    border-radius: 0px 0px 20px 20px;
+    border: 1px black solid;
+    margin: auto;
+  }
+
 
 /*Boom*/
 #container-tree {

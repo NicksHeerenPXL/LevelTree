@@ -318,7 +318,7 @@ body {
      transition: clip-path 500ms ease-in-out;
  }
 
- .tooltip__wrapper h1 {
+ .tooltip__title {
      display: inline;
 
      margin: 0;
