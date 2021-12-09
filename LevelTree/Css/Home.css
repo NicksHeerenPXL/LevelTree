@@ -9,7 +9,9 @@
 header {
   position: relative;
   padding-bottom: 10px;
+  /*
   border: 1px solid black;
+  */
 }
 
 body {
@@ -68,11 +70,14 @@ footer {
 
   text-align: center;
   padding-top: 20px;
+  /*
   border: 1px solid black;
+  */
 }
 
 #tree {
-  max-height: 90%;
+  /*stond op 90%*/
+  max-height: 95%;
 
   object-fit: contain;
   position: absolute;
@@ -80,7 +85,7 @@ footer {
   padding-bottom: 1px;
 
   transform: rotate(-2deg);
-  bottom: -10px;
+  bottom: -15px;
   z-index: -1;
 }
 
@@ -103,8 +108,9 @@ footer {
 /*Levels*/
 
 #container-levels {
-  position: absolute;
-  background-color: rgba(94, 86, 86, 0);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
 }
 #level1 {
   position: absolute;
@@ -118,12 +124,220 @@ footer {
   margin-top: 21%; */
 }
 
-/* Legende onderaan op de pagina */
+/*tooltips met alle levels*/
+.tooltip {
+  --bg-color: #F4C709;
+  --fg-color: rgba(255, 255, 255);
+  --color: #F4C709;
+  --size: 1.05rem;
+  --outer-padding: 0.75rem;
+  --offset: var(--outer-padding);
+  height: 25px;
+  z-index: 1;
+  position: relative;
+  top: 20%;
+  left: 20%;
+  border-radius: 15px;
+  filter: drop-shadow(2px 2px 2px rgba(43, 43, 43, 0.2));
+}
+/*positie van de tooltip op het scherm*/
+.tooltip1 {
+  top: 700px;
+  left: 350px;
+}
+.tooltip2 {
+  top: 650px;
+  left: -220px;
+}
+.tooltip3 {
+  top: 500px;
+  left: 380px;
+}
+.tooltip4 {
+  top: 400px;
+  left: -280px;
+}
+.tooltip5 {
+  top: 280px;
+  left: 380px;
+}
+.tooltip6 {
+  top: 135px;
+  left: 240px;
+}
+.tooltip7 {
+  top: 180px;
+  left: -420px;
+}
+.tooltip8 {
+  top: 80px;
+  left: 0%;
+}
+.tooltip9 {
+  top: 40px;
+  left: -280px;
+}
 
+
+.tooltip__content {
+  min-width: 15rem;
+  max-width: 20rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+
+.tooltip__trigger {
+  display: inline-grid;
+  place-content: center;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+
+  font-size: calc(var(--size) / 2);
+
+  text-decoration: none;
+
+  box-shadow: 0 0 0 5px rgb(152, 152, 152);
+  transition-delay: 500ms;
+  transition: background-color 500ms ease-in-out,
+  box-shadow 250ms ease-in-out;
+  padding: 13px;
+}
+.tooltip__trigger p {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.tooltip__wrapper_boven{
+  position: absolute;
+  top: -57px;
+  left: -45px;
+  z-index: -1;
+  height: 65px;
+  padding: var(--outer-padding);
+
+  background: var(--bg-color);
+  color: var(--fg-color);
+
+  clip-path: circle(
+          calc(var(--size) / 100)
+          at
+          50% 80%
+  );
+
+  box-shadow:
+          inset 0 0 0 5px rgba(152, 152,152),
+          2px 2px 5px 0px rgba(152, 152,152);
+
+  transition: clip-path 500ms ease-in-out;
+  border-radius: 15px;
+}
+
+/*positie en grootte van de div met de text in*/
+.w_lv1 {
+  height: 110px;
+  width: 150px;
+  top: 10px;
+  left: -60px;
+}
+.w_lv2 {
+  height: 110px;
+  width: 150px;
+  top: 10px;
+  left: -60px;
+}
+.w_lv3 {
+  height: 150px;
+  width: 170px;
+  top: 10px;
+  left: -70px;
+}
+.w_lv4 {
+  height: 115px;
+  width: 170px;
+  top: 10px;
+  left: -70px;
+}
+.w_lv5 {
+  height: 75px;
+  width: 125px;
+  top: 13px;
+  left: -48px;
+}
+.w_lv6{
+  height: 75px;
+  width: 125px;
+  top: -60px;
+  left: -48px;
+}
+.w_lv7{
+  height: 75px;
+  width: 125px;
+  top: -60px;
+  left: -48px;
+}
+.w_lv8{
+  height: 75px;
+  width: 125px;
+  top: -60px;
+  left: -48px;
+}
+.w_lv9{
+  height: 75px;
+  width: 125px;
+  top: -60px;
+  left: -48px;
+}
+
+.tooltip__title_center {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  font-size: x-large;
+  font-weight: 500;
+}
+.tooltip__title_center p {
+  line-height: 35px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tooltip:hover > .tooltip__wrapper_boven,
+.tooltip:focus-within > .tooltip__wrapper_boven {
+  clip-path: circle(
+          100%
+          at
+          50%
+          50%
+  );
+}
+
+.tooltip:hover > .tooltip__wrapper_boven,
+.tooltip:focus-within > .tooltip__wrapper_boven{
+  transition-delay: 0ms;
+  box-shadow:
+          inset 0 0 0 5px rgba(152, 152,152);
+          /*
+          2px 2px 5px 0px rgba(152, 152,152);
+          */
+  background-color: var(--color);
+}
+
+/* Legende onderaan op de pagina */
 #legende {
   display: flex;
   justify-content: space-evenly;
-  width: 50%;
+  width: 100%;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(244, 199, 9);
@@ -139,7 +353,7 @@ footer {
   padding: 0px 10px;
   margin: 0;
   height: 35px;
-  width: 26%;
+  width: 230px;
   background-color: #ededed;
   vertical-align: middle;
 }
