@@ -1,0 +1,24 @@
+{
+    "Level":[
+        {
+            "id": 1,
+            "name": "Agile test engineer",
+            "Soft Skills":[
+                "Result oriented",
+                "Flexibility",
+                "Teamwork",
+                "Quality focussed",
+                "Professional attitude",
+                "Bright Ambassador"
+            ],
+            "Technical Skills":[
+                "Understanding code",
+                "Test Automation (tooling) basics",
+                "SQL,XML,JSON",
+                "Test Management Tools basics (incl. default management)"],
+            "Test Skills": "",
+            "Qualifications":""
+        }
+    ]
+    
+}
