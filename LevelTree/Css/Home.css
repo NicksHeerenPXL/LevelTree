@@ -1,181 +1,124 @@
 * {
   font-family: "Nunito", Arial;
   box-sizing: border-box;
-  align-content: center;
-  /* background-color: #ededed; */
 }
-
-/* main elements */
-header {
-  position: relative;
-  padding-bottom: 10px;
-  /*
-  border: 1px solid black;
-  */
-}
-
 body {
-  height: 80%;
-  width: 100%;
-  margin: 0 auto;
-}
-
-footer {
-  width: 100%;
-  /* height: 10%; */
-  background-color: #f4c709;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   margin: 0;
-  border: 1px solid black;
-  position: absolute;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #EDEDED;
+  overflow: hidden;
 }
 
-/* */
-
+/*fonts*/
 .title-font {
   font-weight: bolder;
 }
-
 .text-font {
   font-style: italic;
 }
 
-/* Nav  optionally */
-.Nav {
-  display: flex;
-  margin: auto;
-}
-
-.Nav .title-font {
-  justify-content: center;
-  margin: auto;
-}
-.Nav #logoBrightest {
-  margin: auto;
-  width: 120px;
-  height: 100px;
-  object-fit: contain;
-
-  /* box-shadow: 0 -130px 180px 150px rgba(255, 255, 0, 0.6); sun background light*/
-  /* filter: drop-shadow(5px 4px 10px #222) blur(0.4px); */
-  border-radius: 0px 0px 20px 20px;
-  /* box-shadow: 0px 1px 3px rgba(160, 149, 149, 0.671) inset; */
-  margin: auto;
-  padding: 5px 5px 5px 5px;
-}
-
-/*Boom*/
-#container-tree {
-  position: absolute;
-
-  text-align: center;
-  padding-top: 20px;
-  /*
-  border: 1px solid black;
-  */
-}
-
-#tree {
-  /*stond op 90%*/
-  max-height: 95%;
-
-  object-fit: contain;
-  position: absolute;
-  margin-top: 3%;
-  padding-bottom: 1px;
-
-  transform: rotate(-2deg);
-  bottom: -15px;
-  z-index: -1;
-}
-
-.BOX {
-  display: flex;
-  justify-content: center;
-  width: inherit;
-  height: 100%;
-  margin: auto;
-  bottom: 20%;
-}
-#container-levels,
-#container-tree {
+/*HEADER met logo en titel*/
+header {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: inherit;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+#header-title {
+  align-self: center;
+}
+#logoBrightest{
+  align-self: center;
+  height: 100px;
 }
 
-/*Levels*/
-
-#container-levels {
+/*MAIN met de boom en de levels*/
+#container-boom{
+  top: 7vh;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1000px;
+  height: 93vh;
+  width: 46%;
+  max-height: 2000px;
+  max-width: 1100px;
+  min-width: 700px;
 }
-#level1 {
-  position: absolute;
-  z-index: 1;
-  background-color: rgba(206, 0, 0, 0.4);
-  width: 10px;
-  height: 10px;
-  left: 54%;
-  bottom: 30%;
-  /* margin-left: 52%;
-  margin-top: 21%; */
+#tree {
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left: 40px;
 }
+/*FOOTER met de legendes*/
+footer {
+  width: 100%;
+  background-color: #f4c709;
+  position: fixed;
+  bottom: 0;
+}
+
 
 /*tooltips met alle levels*/
 .tooltip {
   --bg-color: #F4C709;
   --fg-color: rgba(255, 255, 255);
   --color: #F4C709;
-  --size: 1.05rem;
-  --outer-padding: 0.75rem;
-  --offset: var(--outer-padding);
-  height: 25px;
+  --size: 5px;
+  --outer-padding: 2px;
   z-index: 1;
-  position: relative;
-  top: 20%;
-  left: 20%;
+  position: absolute;
+  height: 30px;
+/*  top: 20%;
+  left: 20%;*/
   border-radius: 15px;
   filter: drop-shadow(2px 2px 2px rgba(43, 43, 43, 0.2));
 }
 /*positie van de tooltip op het scherm*/
 .tooltip1 {
-  top: 700px;
-  left: 350px;
+  top: 72%;
+  left: 84%;
 }
 .tooltip2 {
-  top: 650px;
-  left: -220px;
+  top: 66%;
+  left: 5%;
 }
 .tooltip3 {
-  top: 500px;
-  left: 380px;
+  top: 52%;
+  left: 97%;
 }
 .tooltip4 {
-  top: 400px;
-  left: -280px;
+  top: 38%;
+  left: 7%;
 }
 .tooltip5 {
-  top: 280px;
-  left: 380px;
+  top: 30%;
+  left: 105%;
 }
 .tooltip6 {
-  top: 135px;
-  left: 240px;
+  top: 12%;
+  left: 93%;
 }
 .tooltip7 {
-  top: 180px;
-  left: -420px;
+  top: 10%;
+  left: 10%;
 }
 .tooltip8 {
-  top: 80px;
-  left: 0%;
+  top: 2%;
+  left: 60%;
 }
 .tooltip9 {
-  top: 40px;
-  left: -280px;
+  top: 0%;
+  left: 30%;
 }
 
 
@@ -210,7 +153,7 @@ footer {
 }
 .tooltip__trigger p {
   font-weight: bold;
-  font-size: x-large;
+  font-size: large;
 }
 
 .tooltip__wrapper_boven{
@@ -220,6 +163,7 @@ footer {
   z-index: -1;
   height: 65px;
   padding: var(--outer-padding);
+  padding-top: 12px;
 
   background: var(--bg-color);
   color: var(--fg-color);
@@ -337,7 +281,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(244, 199, 9);
@@ -382,15 +326,15 @@ footer {
 }
 
 @media screen and (max-device-width: 1660px) {
-  .item-legende p {
+/*  .item-legende p {
     font-size: small;
-  }
+  }*/
 }
 
 @media screen and (max-device-width: 1250px) {
-  .item-legende p {
+/*  .item-legende p {
     font-size: x-small;
-  }
+  }*/
 }
 
 @media screen and (max-device-width: 800px) {

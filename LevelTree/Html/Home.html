@@ -11,22 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <title>Brightest - Level Tree</title>
 </head>
-<header>
-    <div class="Nav" >
-        <h1 class="title-font">Level Tree</h1>
-        <img id="logoBrightest" src="../Assets/Images/Logo-BgT.png" alt="logo brightest">
-    </div>
-</header>
 <body>
-
-    <div class="BOX">
-
-
-    <div id="container-levels">
-        <div id="level1" class="zoomTarget" data-targetsize="0.03" data-duration="600"></div>
+<header>
+        <h1 id="header-title" class="title-font">Level Tree</h1>
+        <img id="logoBrightest" src="../Assets/Images/Logo-BgT.png" alt="logo brightest">
+</header>
+<main>
+    <div id="container-boom">
+        <img id="tree" src="../Assets/Images/TL1.png" alt="img level tree"/>
         <div class="tooltip tooltip1">
             <a href="#" class="tooltip__trigger">
-                <p>1</p>
+                <p class="title-font">1</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv1 level1">
                 <div class="tooltip__title_center">
@@ -38,7 +33,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tooltip tooltip2">
             <a href="#" class="tooltip__trigger">
                 <p>2</p>
@@ -53,7 +47,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tooltip tooltip3">
             <a href="#" class="tooltip__trigger">
                 <p>3</p>
@@ -69,7 +62,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tooltip tooltip4">
             <a href="#" class="tooltip__trigger">
                 <p>4</p>
@@ -84,7 +76,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tooltip tooltip5">
             <a href="#" class="tooltip__trigger">
                 <p>5</p>
@@ -98,7 +89,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tooltip tooltip6">
             <a href="#" class="tooltip__trigger">
                 <p>6</p>
@@ -112,7 +102,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tooltip tooltip7">
             <a href="#" class="tooltip__trigger">
                 <p>7</p>
@@ -126,7 +115,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tooltip tooltip8">
             <a href="#" class="tooltip__trigger">
                 <p>8</p>
@@ -140,7 +128,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tooltip tooltip9">
             <a href="#" class="tooltip__trigger">
                 <p>9</p>
@@ -155,48 +142,26 @@
             </div>
         </div>
     </div>
+</main>
 
-    <div id="container-tree">
-        <img id="tree" src="../Assets/Images/TL1.png" alt="img level tree"/>
 
-    </div>
-</div>
-
- <!--Levels in boom-->
- <!-- <div class="tooltip">
-    <a href="#" class="tooltip__trigger">
-        <p style="font-weight: bold; font-size: x-large">1</p>
-    </a>
-    <div class="tooltip__wrapper">
-        <h1 class="tooltip__title" style="margin-bottom: 0px; padding-bottom: 0px">
-            Lv1 - Agile Test Engineer<br><span style="margin-left: 42px; font-weight: 400; font-size: medium">Experience: < 1Year</span>
-        </h1>
-        <div class="tooltip__content">
-
+<!--Legende items onderaan de pagina-->
+<footer>
+    <div id="legende">
+        <div class="item-legende">
+            <div class="circle-legende manual-legende-circle"></div>
+            <p>Manual Test Expertise</p>
+        </div>
+        <div class="item-legende">
+            <div class="circle-legende technical-legende-circle"></div>
+            <p>Technical Expertise</p>
+        </div>
+        <div class="item-legende">
+            <div class="circle-legende lead-legende-circle"></div>
+            <p>Lead Expertise</p>
         </div>
     </div>
-</div> -->
-
-    <!--Legende items onderaan de pagina-->
-    <footer>
-        <!--Legende items onderaan de pagina-->
-
-        <div id="legende">
-            <div class="item-legende">
-                <div class="circle-legende manual-legende-circle"></div>
-                <p>Manual Test Expertise</p>
-            </div>
-            <div class="item-legende">
-                <div class="circle-legende technical-legende-circle"></div>
-                <p>Technical Expertise</p>
-            </div>
-            <div class="item-legende">
-                <div class="circle-legende lead-legende-circle"></div>
-                <p>Lead Expertise</p>
-            </div>
-        </div>
-
-    </footer>
+</footer>
     <script src="/Js/Main.js"></script>
     <!--Link voor de js zoom funcionaliteit-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
