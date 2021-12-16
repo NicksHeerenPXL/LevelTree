@@ -332,6 +332,230 @@ footer {
   background-color: blue;
 }
 
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.button {
+  position: absolute;
+  top: 20px;
+  text-decoration: none;
+  font-size: .875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  color: #9191e9;
+  padding: 1rem 2rem;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .80);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: .30s ease-in-out;
+}
+.popup-inner {
+   position: relative;
+   bottom: -100vw;
+   right: -100vh;
+   display: flex;
+   align-items: center;
+   max-width: 900px;
+   max-height: 700px;
+   width: 65%;
+   height: 85%;
+   transform: rotate(32deg);
+  background-color: #EDEDED;
+   transition: .64s ease-in-out;
+  border: 1px solid black;
+  border-radius: 50px 5px 50px 50px;
+ }
+.popup__photo {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50px 15px 15px 50px;
+  background-image: linear-gradient(to right, #F4C709, #F0AB10);
+}
+
+#logoBrightest-modal {
+  height: 175px;
+  width: 175px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-image: url("../Assets/Images/Symbool.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position-x: Opx;
+  background-position-y: -17px;
+}
+#foto-modal {
+  z-index: 4;
+  position: relative;
+  top: 40px;
+  background-image: url("../Assets/Images/tak2.png");
+  background-size: 101% 100%;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 180px;
+  border-radius: 50px 50px 0px 50px;
+}
+.popup__text {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+}
+.popup__text h1 {
+  align-self: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #0A0A0A;
+  margin-top: 0px;
+}
+
+.popup__text p {
+  font-size: .875rem;
+  color: #686868;
+  line-height: 1.5;
+}
+
+.modal-expierence {
+  position: relative;
+  margin-top: -30px;
+  left: -170px;
+  line-height: 0px;
+  color: black;
+}
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup-inner {
+  bottom: 0;
+  right: 0;
+  transform: rotate(0);
+}
+
+.popup__close {
+   position: absolute;
+   right: -1rem;
+   top: -1rem;
+   width: 3rem;
+   height: 3rem;
+   border-radius: 100%;
+   background-color: white;
+   z-index: 4;
+   color: black;
+   line-height: 3rem;
+   text-align: center;
+   cursor: pointer;
+   text-decoration: none;
+  border: 1px solid black;
+ }
+
+/*ACCORDION*/
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin:0 auto;
+}
+.accordion {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.accordion:last-child{
+  margin-bottom: 0;
+}
+.accordion-label {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  background: #878787;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+}
+.accordion-label:hover {
+  background: #878787;
+}
+.accordion-label::after {
+  content: "\276F";
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content {
+  max-height: 0;
+  color: black;
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content p{
+  margin: 0;
+  color: rgba(4,57,94,.7);
+  font-size: 18px;
+}
+.accordion-content ul{
+  margin: 0;
+}
+
+input:checked + .accordion-label {
+  background: #878787;
+}
+input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 16px;
+}
+
 @media screen and (max-device-width: 1660px) {
 /*  .item-legende p {
     font-size: small;

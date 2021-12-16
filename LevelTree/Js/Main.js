@@ -3,10 +3,10 @@ document.getElementById('tooltipLv1').addEventListener("click", function () {
     let zoomElement = document.getElementById('tooltipLv1');
     zoomElement.style.zoom='92%';
 })
-document.getElementById('tooltipLv2').addEventListener("click", function () {
+/*document.getElementById('tooltipLv2').addEventListener("click", function () {
     let zoomElement = document.getElementById('tooltipLv2');
     zoomElement.style.zoom='92%';
-})
+})*/
 document.getElementById('tooltipLv3').addEventListener("click", function () {
     let zoomElement = document.getElementById('tooltipLv3');
     zoomElement.style.zoom='95%';
@@ -36,3 +36,6 @@ document.getElementById('tooltipLv9').addEventListener("click", function () {
     zoomElement.style.zoom='95%';
 })
 
+function terugNaarStart() {
+    document.getElementById('tree').click();
+}
