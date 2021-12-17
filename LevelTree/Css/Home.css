@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
-  background-color: #EDEDED;
+  background-color: #ededed;
   overflow: hidden;
 }
 
@@ -72,18 +72,13 @@ footer {
 
 /*tooltips met alle levels*/
 .tooltip {
-  --bg-color: #F4C709;
-  --fg-color: rgba(255, 255, 255);
-  --color: #F4C709;
+  --bg-color: #ffffff;
   --size: 5px;
   --outer-padding: 2px;
   z-index: 1;
   position: absolute;
   height: 30px;
-/*  top: 20%;
-  left: 20%;*/
   border-radius: 15px;
-  filter: drop-shadow(1px 1px 1px rgba(43, 43, 43, 0.2));
 }
 /*positie van de tooltip op het scherm*/
 .tooltip1 {
@@ -135,27 +130,21 @@ footer {
 .tooltip__trigger {
   display: inline-grid;
   place-content: center;
-
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-
   background-color: var(--bg-color);
-  color: var(--fg-color);
-
   font-size: calc(var(--size) / 2);
-
   text-decoration: none;
-
-  box-shadow: 0 0 0 5px rgb(152, 152, 152);
+  border: 3px solid #F4C709;
   transition-delay: 500ms;
   transition: background-color 500ms ease-in-out,
   box-shadow 250ms ease-in-out;
   padding: 13px;
 }
 .tooltip__trigger p {
-  font-weight: bold;
-  font-size: large;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .tooltip__wrapper_boven{
@@ -166,19 +155,14 @@ footer {
   height: 65px;
   padding: var(--outer-padding);
   padding-top: 12px;
-
   background: var(--bg-color);
-  color: var(--fg-color);
-
+  color: black;
   clip-path: circle(
           calc(var(--size) / 100)
           at
           50% 80%
   );
-
-  box-shadow:
-          inset 0 0 0 5px rgba(152, 152,152),
-          2px 2px 5px 0px rgba(152, 152,152);
+  border: 3px solid #F4C709;
 
   transition: clip-path 500ms ease-in-out;
   border-radius: 15px;
@@ -186,58 +170,58 @@ footer {
 
 /*positie en grootte van de div met de text in*/
 .w_lv1 {
-  height: 110px;
-  width: 150px;
-  top: 10px;
-  left: -60px;
+  height: 90px;
+  width: 135px;
+  top: 15px;
+  left: -50px;
 }
 .w_lv2 {
-  height: 110px;
-  width: 150px;
-  top: 10px;
-  left: -60px;
+  height: 90px;
+  width: 135px;
+  top: 15px;
+  left: -50px;
 }
 .w_lv3 {
-  height: 150px;
-  width: 170px;
-  top: 10px;
-  left: -70px;
+  height: 120px;
+  width: 160px;
+  top: 15px;
+  left: -65px;
 }
 .w_lv4 {
-  height: 115px;
-  width: 170px;
-  top: 10px;
-  left: -70px;
+  height: 85px;
+  width: 155px;
+  top: 15px;
+  left: -60px;
 }
 .w_lv5 {
-  height: 75px;
-  width: 125px;
-  top: 13px;
-  left: -48px;
+  height: 55px;
+  width: 80px;
+  top: 15px;
+  left: -25px;
 }
 .w_lv6{
-  height: 75px;
-  width: 125px;
-  top: -60px;
-  left: -48px;
+  height: 60px;
+  width: 80px;
+  top: -45px;
+  left: -25px;
 }
 .w_lv7{
-  height: 75px;
-  width: 125px;
-  top: -60px;
-  left: -48px;
+  height: 60px;
+  width: 85px;
+  top: -45px;
+  left: -25px;
 }
 .w_lv8{
-  height: 75px;
-  width: 125px;
-  top: -60px;
-  left: -48px;
+  height: 60px;
+  width: 90px;
+  top: -45px;
+  left: -29px;
 }
 .w_lv9{
-  height: 75px;
-  width: 125px;
-  top: -60px;
-  left: -48px;
+  height: 60px;
+  width: 115px;
+  top: -45px;
+  left: -40px;
 }
 
 .tooltip__title_center {
@@ -247,12 +231,11 @@ footer {
   align-items: center;
   margin: 0;
   padding: 0;
-  margin-top: 8px;
-  font-size: x-large;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 .tooltip__title_center p {
-  line-height: 35px;
+  line-height: 30px;
   margin: 0px;
   padding: 0px;
 }
@@ -270,12 +253,13 @@ footer {
 .tooltip:hover > .tooltip__wrapper_boven,
 .tooltip:focus-within > .tooltip__wrapper_boven{
   transition-delay: 0ms;
-  box-shadow:
-          inset 0 0 0 4px rgba(152, 152,152);
+  /*
+  box-shadow: inset 0 0 0 3px rgba(152, 152,152);
+  */
           /*
           2px 2px 5px 0px rgba(152, 152,152);
           */
-  background-color: var(--color);
+  background-color: rgb(255, 255, 255);
 }
 
 /*Zoomfunctionaliteiten*/
@@ -288,10 +272,10 @@ footer {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(244, 199, 9);
+  background-color: #F4C709;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -305,7 +289,7 @@ footer {
   margin: 0;
   height: 35px;
   width: 230px;
-  background-color: #ededed;
+  background-color: white;
   vertical-align: middle;
 }
 .circle-legende {
@@ -318,7 +302,8 @@ footer {
 
 .item-legende p {
   font-family: "Nunito";
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 600;
   margin: auto;
   align-content: center;
 }
@@ -411,7 +396,6 @@ footer {
   background-image: url("../Assets/Images/Symbool.png");
   background-repeat: no-repeat;
   background-size: 110%;
-  background-position-x: Opx;
   background-position-y: -17px;
 }
 #foto-modal {
@@ -555,7 +539,10 @@ input:checked ~ .accordion-content {
   max-height: 100vh;
   padding: 16px;
 }
-
+.video-container {
+  margin: 0;
+  padding: 0;
+}
 @media screen and (max-device-width: 1660px) {
 /*  .item-legende p {
     font-size: small;
@@ -624,4 +611,7 @@ input:checked ~ .accordion-content {
     transform: rotate(-1deg);
   }
 
+}
+P {
+  color: black;
 }

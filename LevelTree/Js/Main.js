@@ -39,3 +39,19 @@ document.getElementById('tooltipLv9').addEventListener("click", function () {
 function terugNaarStart() {
     document.getElementById('tree').click();
 }
+document.getElementById('video1').addEventListener('click', function (){
+    let vid= document.getElementById('video1');
+    vid.dispatchEvent(new KeyboardEvent('keydown',{'key':'f'}));
+    alert("test");
+});
+
+document.querySelector('[aria-label^="Afspelen"]').addEventListener('click', ()=> {
+    alert('test ja');
+    let ele = document.querySelector('.ytp-fullscreen-button');
+    ele.onclick =true;
+
+
+});
+
+
+//ytp-fullscreen-button
