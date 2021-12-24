@@ -23,9 +23,20 @@
         <img id="tree" src="../Assets/Images/TL1.png" alt="img level tree"/>
 
         <!--Dit is het punt waar er op ingezoomd is bij het starten van de pagina en hierna rustig uitzoomd-->
-        <div id="zoomStartpunt" class="zoomTarget" data-targetsize="0.02" data-duration="10"></div>
+        <div id="zoomStartpunt" class="zoomTarget" data-targetsize="0.05" data-duration="10">
+        </div>
 
         <!--TOOLTIPS VAN ALLE LEVELS-->
+        <!--<div id="tooltipLvTest" data-level="1" class="tooltip tooltipTest zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
+                <p class="title-font">T</p>
+            </a>
+            <div class="tooltip__wrapper_boven w_lvtest leveltest">
+                <div class="tooltip__title_center">
+                    <p>Test</p>
+                </div>
+            </div>
+        </div>-->
         <div id="tooltipLv1" data-level="1" class="tooltip tooltip1 zoomTarget" data-targetsize="0.11" data-duration="600">
             <a href="#popup" class="tooltip__trigger">
                 <p class="title-font">1</p>
@@ -154,16 +165,55 @@
     <div class="popup" id="popup">
         <div class="popup-inner">
             <div class="popup__photo">
-                <img id="logo-modal" src="../Assets/Images/logoModal.png" alt="">
-<!--
-                <p style="font-size: 40px; letter-spacing: 5px; transform: rotate(-90deg); font-weight: bolder; margin-bottom: 0px; margin-left: 50px;">brigh<span style="color: white">test</span></p>
--->
+                <p id="logo-text-modal">brigh<span style="color: white">test</span></p>
             </div>
             <div class="popup__text">
-                <h1 id="modal-title"></h1>
-                <p id="modal-experience" class="modal-expierence"> > 1 year experience </p>
+                <h1 id="modal-title">Dit is een test met een raster</h1>
+                <p id="modal-experience" class="modal-expierence">test</p>
                 <div id="accordion-container" class="accordion-wrapper">
-                    <!--Hier worden alle accordions geladen voor de levels-->
+                    <div class="accordion">
+                        <input type="radio" name="radio-a" id="check2">
+                        <label class="accordion-label" for="check2">Test</label>
+                        <div class="accordion-content">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th class="leegvak"></th>
+                                    <th style="width: 15%; border: 1px solid black;">Test Expertise</th>
+                                    <th style="width: 15%; border: 1px solid black;">Technical Expertise</th>
+                                    <th style="width: 15%; border: 1px solid black;">Lead Expertise</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Result oriented</td>
+                                    <td style="text-align: center">v</td>
+                                    <td style="text-align: center"></td>
+                                    <td style="text-align: center"></td>
+                                </tr>
+                                <tr>
+                                    <td>Flexibility</td>
+                                    <td style="text-align: center"></td>
+                                    <td style="text-align: center">v</td>
+                                    <td style="text-align: center"></td>
+                                </tr>
+                                <tr>
+                                    <td>Teamwork</td>
+                                    <td style="text-align: center"></td>
+                                    <td style="text-align: center"></td>
+                                    <td style="text-align: center">v</td>
+                                </tr>
+                                <tr>
+                                    <td>Professional attitude</td>
+                                    <td style="text-align: center"></td>
+                                    <td style="text-align: center">v</td>
+                                    <td style="text-align: center"></td>
+                                </tr>
+                                </tbody>
+                                <tfoot></tfoot>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a id="sluitModal" class="popup__close title-font" href="#" onclick="setTimeout(terugNaarStart, 300);" >X</a>
