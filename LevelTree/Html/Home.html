@@ -12,15 +12,22 @@
     <title>Brightest - Level Tree</title>
 </head>
 <body>
-<header>
+<header id="header">
         <h1 id="header-title" class="title-font">Level Tree</h1>
         <img id="logoBrightest" src="../Assets/Images/Logo_Brightest_CMYK_tagline_AIM%20HIGH.png" alt="logo brightest">
 </header>
 <main class="zoomViewport">
     <div id="container-boom" class="zoomContainer">
+
+        <!--IMAGE BOOM-->
         <img id="tree" src="../Assets/Images/TL1.png" alt="img level tree"/>
-        <div id="tooltipLv1" class="tooltip tooltip1 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a href="#" class="tooltip__trigger">
+
+        <!--Dit is het punt waar er op ingezoomd is bij het starten van de pagina en hierna rustig uitzoomd-->
+        <div id="zoomStartpunt" class="zoomTarget" data-targetsize="0.02" data-duration="10"></div>
+
+        <!--TOOLTIPS VAN ALLE LEVELS-->
+        <div id="tooltipLv1" data-level="1" class="tooltip tooltip1 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p class="title-font">1</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv1 level1">
@@ -30,8 +37,8 @@
                 </div>
             </div>
         </div>
-        <div id="tooltipLv2" class="tooltip tooltip2 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a  class="tooltip__trigger"  href="#popup">
+        <div id="tooltipLv2" data-level="2" class="tooltip tooltip2 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p>2</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv2 level2">
@@ -44,8 +51,8 @@
                 </div>
             </div>
         </div>
-        <div id="tooltipLv3" class="tooltip tooltip3 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a href="#" class="tooltip__trigger">
+        <div id="tooltipLv3" data-level="3" class="tooltip tooltip3 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p>3</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv3 level3">
@@ -59,8 +66,8 @@
                 </div>
             </div>
         </div>
-        <div id="tooltipLv4" class="tooltip tooltip4 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a href="#" class="tooltip__trigger">
+        <div id="tooltipLv4" data-level="4" class="tooltip tooltip4 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p>4</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv4 level4">
@@ -73,8 +80,8 @@
                 </div>
             </div>
         </div>
-        <div id="tooltipLv5" class="tooltip tooltip5 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a href="#" class="tooltip__trigger">
+        <div id="tooltipLv5" data-level="5" class="tooltip tooltip5 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p>5</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv5 level5">
@@ -86,8 +93,8 @@
                 </div>
             </div>
         </div>
-        <div id="tooltipLv6" class="tooltip tooltip6 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a href="#" class="tooltip__trigger">
+        <div id="tooltipLv6" data-level="6" class="tooltip tooltip6 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p>6</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv6 level6">
@@ -99,8 +106,8 @@
                 </div>
             </div>
         </div>
-        <div id="tooltipLv7" class="tooltip tooltip7 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a href="#" class="tooltip__trigger">
+        <div id="tooltipLv7" data-level="7" class="tooltip tooltip7 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p>7</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv7 level7">
@@ -112,8 +119,8 @@
                 </div>
             </div>
         </div>
-        <div id="tooltipLv8" class="tooltip tooltip8 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a href="#" class="tooltip__trigger">
+        <div id="tooltipLv8" data-level="8" class="tooltip tooltip8 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p>8</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv8 level8">
@@ -125,8 +132,8 @@
                 </div>
             </div>
         </div>
-        <div id="tooltipLv9" class="tooltip tooltip9 zoomTarget" data-targetsize="0.11" data-duration="600">
-            <a href="#" class="tooltip__trigger">
+        <div id="tooltipLv9" data-level="9" class="tooltip tooltip9 zoomTarget" data-targetsize="0.11" data-duration="600">
+            <a href="#popup" class="tooltip__trigger">
                 <p>9</p>
             </a>
             <div class="tooltip__wrapper_boven w_lv9 level9">
@@ -144,85 +151,22 @@
 
 <!--MODAL-->
 <div class="container">
-    <!--<a class="button" href="#popup">Open Modal</a>-->
     <div class="popup" id="popup">
         <div class="popup-inner">
             <div class="popup__photo">
+                <img id="logo-modal" src="../Assets/Images/logoModal.png" alt="">
 <!--
-                <div id="logoBrightest-modal" ></div>
--->
-                <!--<div id="foto-modal"></div>-->
                 <p style="font-size: 40px; letter-spacing: 5px; transform: rotate(-90deg); font-weight: bolder; margin-bottom: 0px; margin-left: 50px;">brigh<span style="color: white">test</span></p>
+-->
             </div>
             <div class="popup__text">
-                <h1>Level 2 Agile Test Engineer</h1>
-                <p class="modal-expierence"> > 1 year experience </p>
-<!--
-                <p style="font-size: 17px; font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.</p>
--->
-                <div class="accordion-wrapper">
-                    <div class="accordion">
-                        <input type="radio" name="radio-a" id="check1" checked>
-                        <label class="accordion-label" for="check1">Soft Skills</label>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>First Time Right attitude</li>
-                                <li>Communication skills</li>
-                                <li>Proactive</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <input type="radio" name="radio-a" id="check2">
-                        <label class="accordion-label" for="check2">Technical Skills</label>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>Basic coding & scripting skills</li>
-                                <li>API Testing Basics</li>
-                                <li>API Test Automatisation</li>
-                                <li>Using Automatisation Framework/Tools</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <input type="radio" name="radio-a" id="check4">
-                        <label class="accordion-label" for="check4">Test Skills</label>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>Basic test estimation & reporting (for yourself)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <input type="radio" name="radio-a" id="check5">
-                        <label class="accordion-label" for="check5">BTO/C skills (Building the Organisation of Costumer)</label>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>Basic Traning & Presentation skills</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <input type="radio" name="radio-a" id="check3">
-                        <label class="accordion-label" for="check3">Quallifications</label>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>ISTQB Certified Agile Tester</li>
-                                <li>BDD Essentials</li>
-                                <li>SwiTch track finalized</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--<div class="accordion">
-                        <input type="radio" name="radio-a" id="check6">
-                        <label class="accordion-label" for="check6">Video's</label>
-                        <div class="accordion-content video-container">
-                            <iframe width="200" height="100" id="video1"  src="https://www.youtube.com/embed/aHI8Wmkny0c??rel=0&autoplay=1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>-->
+                <h1 id="modal-title"></h1>
+                <p id="modal-experience" class="modal-expierence"> > 1 year experience </p>
+                <div id="accordion-container" class="accordion-wrapper">
+                    <!--Hier worden alle accordions geladen voor de levels-->
                 </div>
             </div>
-            <a class="popup__close title-font" href="#" onclick="setTimeout(terugNaarStart, 300);" >X</a>
+            <a id="sluitModal" class="popup__close title-font" href="#" onclick="setTimeout(terugNaarStart, 300);" >X</a>
         </div>
     </div>
 </div>
