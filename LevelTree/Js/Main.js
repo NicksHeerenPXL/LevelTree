@@ -4,6 +4,14 @@
 function terugNaarStart() {
     document.getElementById('tree').click();
     document.getElementById("header").style.display = "flex";
+
+    // Close video Frame if it open.
+    var VideoFrame = $('.videoFrame');
+
+    if (VideoFrame.hasClass('popFrame')) {
+        document.querySelector('#cinema').src = null;
+        $(".videoFrame").toggleClass("popFrame");
+    }
 }
 
 //Bij het laden van de pagina wordt er rustig uigezoomd tot de boom volledig zichtbaar is
@@ -80,7 +88,7 @@ function VulModalMetJuisteGegevens(levelId) {
             let inputAccordion = document.createElement("input");
             inputAccordion.id = "check" + (i - 2);
             inputAccordion.setAttribute("type", "radio");
-            console.log("test" + " " +inputAccordion.getAttribute('type'));
+            // Test console.log("test" + " " + inputAccordion.getAttribute('type'));
             inputAccordion.setAttribute("name", "radio-a");
 
             //Mag alleen maar voor de eerste true zijn
@@ -125,9 +133,7 @@ function VulModalMetJuisteGegevens(levelId) {
                     let thumbnail = document.createElement('div');
                     thumbnail.classList.add('thumbnail');
 
-                    thumbnail.setAttribute('data', element[i, 0]);
-                    
-                    console.log(thumbnail.dataset.YTVideo);
+                    //thumbnail
 
 
                     // create image for thumbnail 
@@ -135,6 +141,9 @@ function VulModalMetJuisteGegevens(levelId) {
 
                     let linkYT = `https://i.ytimg.com/vi/${element[i, 0]}/hqdefault.jpg`;
 
+                    imageThumbnail.setAttribute('data-ytvideo', element[i, 0]);
+
+                    //console.log(imageThumbnail.);
 
                     imageThumbnail.src = linkYT;
 
@@ -183,7 +192,7 @@ function VulModalMetJuisteGegevens(levelId) {
         /*Loopt over alle items per skill*/
         for (let x = 0; x < juisteObject[key].length; x++) {
             if (juisteObject[key] != null) {
-                console.log(juisteObject[key][x][0] + "/" + juisteObject[key][x][1]);
+                //               console.log(juisteObject[key][x][0] + "/" + juisteObject[key][x][1]);
                 let lijstItem = document.createElement("li");
                 lijstItem.innerHTML = juisteObject[key][x][0];
                 if (juisteObject[key][x][1] == "lead") {
@@ -227,8 +236,12 @@ function CreateArrowCarousel(arrowSide, dataSlide) {
 // toggle VideoBtn Classs
 //
 $(".Videobtn").click(function () {
-
     $(".videoFrame").toggleClass("popFrame");
+
+    if (!$('.videoFrame').hasClass("popFrame")) {
+        document.querySelector('#cinema').src = null;
+    }
+
 });
 
 // slider effect
@@ -271,14 +284,14 @@ function SliderEffect(buttonON = false) {
             clearInterval(play);
         });
 
-
-        // thumbnails[i].addEventListener('click', () => {
-        //     console.log(this.getAttribute('data'));
-        //     // var youtubeID = "https://www.youtube-nocookie.com/embed/" + e.getAttribute('data-ytvideo');
-        //     // $(".videoFrame").toggleClass("popFrame");
-        //     // var frameVideo = document.querySelector('.videoFrame iframe')
-        //     // frameVideo.src = youtubeID;
-        // })
+        // thumbnail Click EventListener 
+        thumbnails[i].firstChild.addEventListener('click', function () {
+            // test  console.log(this.getAttribute('data-ytvideo'));
+            var youtubeID = "https://www.youtube-nocookie.com/embed/" + this.getAttribute('data-ytvideo');
+            $(".videoFrame").toggleClass("popFrame");
+            var frameVideo = document.querySelector('.videoFrame iframe')
+            frameVideo.src = youtubeID;
+        })
 
         thumbnails[i].addEventListener('mouseout', function () {
             return play = setInterval(autoPlay, 50);
