@@ -237,9 +237,10 @@ function CreateArrowCarousel(arrowSide, dataSlide) {
 //
 $(".Videobtn").click(function () {
     $(".videoFrame").toggleClass("popFrame");
-
+    document.querySelector('#cinema').style.visibility = "visible"
     if (!$('.videoFrame').hasClass("popFrame")) {
         document.querySelector('#cinema').src = null;
+        document.querySelector('#cinema').style.visibility = "hidden"
     }
 
 });
@@ -289,6 +290,8 @@ function SliderEffect(buttonON = false) {
             // test  console.log(this.getAttribute('data-ytvideo'));
             var youtubeID = "https://www.youtube-nocookie.com/embed/" + this.getAttribute('data-ytvideo');
             $(".videoFrame").toggleClass("popFrame");
+            document.querySelector('#cinema').style.visibility = "visible"
+
             var frameVideo = document.querySelector('.videoFrame iframe')
             frameVideo.src = youtubeID;
         })

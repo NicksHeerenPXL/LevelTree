@@ -305,7 +305,7 @@ footer {
   margin: 0;
   height: 35px;
   width: 230px;
-  background-color: white;
+  background-color: #ededed;
   vertical-align: middle;
 }
 .circle-legende {
@@ -381,7 +381,7 @@ footer {
   width: 65%;
   height: 85%;
   transform: rotate(32deg);
-  background-color: #ededed;
+  background-color: #edededab;
   transition: 0.64s ease-in-out;
   border: 1px solid black;
   border-radius: 50px 5px 50px 50px;
@@ -586,8 +586,6 @@ input:checked ~ .accordion-content {
   z-index: 3;
   border-radius: 15px 0px 50px 15px;
   visibility: hidden;
-  border: 1px solid black;
-  -webkit-transform: translate(0%, -150%);
 }
 
 /* here */
@@ -615,6 +613,7 @@ input:checked ~ .accordion-content {
   height: 0;
   line-height: 0px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .videoBox {
   margin: auto;
@@ -690,21 +689,35 @@ input:checked ~ .accordion-content {
   width: 2px;
   border: 1px solid #d5d5d5;
   background: #d5d5d5;
+  border-radius: 10px;
 }
 
 .box::-webkit-scrollbar-track {
   --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.accordion-container::-webkit-scrollbar {
+/* */
+.accordion-wrapper::-webkit-scrollbar {
+  border-radius: 10px;
   height: 5px;
-  width: 2px;
+  width: 4px;
   border: 1px solid #d5d5d5;
   background: #d5d5d5;
 }
+.accordion-wrapper::-webkit-scrollbar-track {
+  --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
 
+.accordion-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--brightestFire);
+  outline: 1px solid #eee;
+  /* border-radius: 100px; */
+}
+/* */
 .box::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
+  border-radius: 10px;
+  background: var(--brightestFire);
   outline: 1px solid #eee;
   /* border-radius: 100px; */
 }
