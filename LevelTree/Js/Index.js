@@ -1,6 +1,11 @@
+/*Fix voor probleem met de uilijning van Brightest text in de modal bij gebruik van Safari*/
+let isBrowserSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+if (isBrowserSafari){
+    document.getElementById('logo-text-modal').style.marginTop = "280%";
+    document.getElementsByClassName('item-legende')[0].style.width = "250px";
+}
 
-
-//functie om van de modal terug naar het startscherm te gaan en header terug zichtbaar te maken
+//functie om van de modal terug naar het startscherm te gaan en header terug zichtbaar te maken + sluiten van frame video's
 function terugNaarStart() {
     document.getElementById('tree').click();
     document.getElementById("header").style.display = "flex";
@@ -22,7 +27,7 @@ window.addEventListener('load', (event) => {
 
 //Check of de pagina herladen wordt, zoja? ga terug naar de homepage. Oplossing voor bug met het laden van info in de modal.
 if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-    window.location.href = "home.html";
+    window.location.href = "Index.html";
 }
 
 //Functies om de inhoud van de modal te veranderen
@@ -116,9 +121,6 @@ function VulModalMetJuisteGegevens(levelId) {
                 let slideDiv = document.createElement("div");
                 slideDiv.classList.add("slide-container");
 
-
-
-
                 // create carousel slider
                 let SectionCarousel = document.createElement('section');
                 SectionCarousel.classList.add('box');
@@ -129,14 +131,12 @@ function VulModalMetJuisteGegevens(levelId) {
 
                     // test console.log(element[0]);
 
-                    // create div : thumbnail 
+                    // create div : thumbnail
                     let thumbnail = document.createElement('div');
                     thumbnail.classList.add('thumbnail');
 
                     //thumbnail
-
-
-                    // create image for thumbnail 
+                    // create image for thumbnail
                     let imageThumbnail = document.createElement('img');
 
                     let linkYT = `https://i.ytimg.com/vi/${element[i, 0]}/hqdefault.jpg`;
@@ -151,7 +151,6 @@ function VulModalMetJuisteGegevens(levelId) {
 
                     SectionCarousel.appendChild(thumbnail);
                 });
-
 
                 let buttonEffect = false;
                 if (SectionCarousel.childElementCount > 2) {
@@ -171,18 +170,10 @@ function VulModalMetJuisteGegevens(levelId) {
                     slideDiv.appendChild(SectionCarousel);
                 }
 
-
-
-
-
-
                 containerInhoudAccordion.appendChild(slideDiv);
                 SliderEffect(buttonEffect);
                 return;
             }
-
-
-
 
             //Inhoud van de accordion
             lijst = document.createElement("ul");
@@ -268,7 +259,7 @@ function SliderEffect(buttonON = false) {
     // alert(maxScrollLeft);
     // alert("Left Scroll:" + slider.scrollLeft);
 
-    //AUTO PLAY THE SLIDER 
+    //AUTO PLAY THE SLIDER
     function autoPlay() {
         if (slider.scrollLeft > (maxScrollLeft - 1)) {
             slider.scrollLeft -= maxScrollLeft;
@@ -285,7 +276,7 @@ function SliderEffect(buttonON = false) {
             clearInterval(play);
         });
 
-        // thumbnail Click EventListener 
+        // thumbnail Click EventListener
         thumbnails[i].firstChild.addEventListener('click', function () {
             // test  console.log(this.getAttribute('data-ytvideo'));
             var youtubeID = "https://www.youtube-nocookie.com/embed/" + this.getAttribute('data-ytvideo');
@@ -307,7 +298,10 @@ function SliderEffect(buttonON = false) {
 
 
 
-//INHOUD MODALS
+//INHOUD MODALS => telkens een array met 2 plaatsen.
+//Op positie [0] staat altijd de inhoud (de tekst die gaat weergegeven worden
+//Op positie [1] staat atlijd bij welke rol de tekst hoort => aan de hand van deze parameter (tester,technical of lead)
+//Wordt het juiste kleur van blaadje weegegeven in de modal
 alleDataLevels = [
 
     //---------------------------LEVEL1---------------------------
@@ -322,7 +316,7 @@ alleDataLevels = [
             ["Teamwork", "tester"],
             ["Quality focussed", "tester"],
             ["Professional attitude", "tester"],
-            ["Bright Ambassador (Like & share Brightest posts, verbal,...", "tester"]
+            ["Bright Ambassador (Like & share Brightest posts, verbal,...)", "tester"]
         ],
         "Technical Skills": [
             //GENERAL
@@ -365,9 +359,9 @@ alleDataLevels = [
         "Experience": "> 1 year experience",
         "Soft Skills": [
             //GENERAL
-            ["First Time Right attitude", "tester"],
+            ["First Time Right attitude (setting the example, ask for advice & explanations where necessary)", "tester"],
             ["Communication skills (verbal & non-verbal)", "tester"],
-            ["Proactive (think ahead with your team)", "tester"]
+            ["Proactive (think ahead/with your team)", "tester"]
         ],
         "Technical Skills": [
             //GENERAL
@@ -377,7 +371,7 @@ alleDataLevels = [
             //SPECIFIC
             ["API Test Automation", "technical"],
             ["Using Automation Framework/Tools", "technical"],
-            ["Technology basics: NodeJS, GIT, CI/CD, Rest, PHP, MySQL, Java IntelliJ, Microservices", "technical"]
+            ["Technology basics: NodeJS, GIT, CI/CD, Rest, PHP MySQL, Java IntelliJ, Microservices, ...", "technical"]
         ],
         "Test Skills": [
             //GENERAL
@@ -422,7 +416,7 @@ alleDataLevels = [
             //GENERAL
             ["DevOps Basic Concepts (via training =>)", "tester"],
             ["Shift-left Basic Concepts (via training =>)", "tester"],
-            ["Build Domain(s) (via training =>)", "tester"],
+            ["Build Domain(s) Expertise (your specialisations / ambitions)", "tester"],
 
             //SPECIFIC
             ["Automation tool specialist", "technical"],
@@ -500,7 +494,7 @@ alleDataLevels = [
             //GENERAL
             ["Construct Trainings (content)", "tester"],
             ["Write blogs, papers, articles (content)", "tester"],
-            ["Knowledge Sharing (gastcolleges, stagebegeleiding,...", "tester"]
+            ["Knowledge Sharing (gastcollege's, stagebegeleiding, ...)", "tester"]
         ],
         "Qualifications": [
             //GENERAL
@@ -526,21 +520,20 @@ alleDataLevels = [
         "Experience": "> 4 year experience",
         "Soft Skills": [
             //GENERAL
-            ["Leadership skills (motivation, team vision alignment,...)", "tester"],
+            ["Leadership skills (motivation, team vision alignment, ...)", "tester"],
             ["Independence (team decisions, organisation,...)", "tester"],
-            ["Coach team members", "tester"],
+            ["Coach teammembers", "tester"],
 
             //SPECIFIC
             ["Conflict Management", "lead"],
-            ["Budgeting", "lead"],
-            ["Manage/Lead/Coach more than 3 teams (5 - 10 people) or 1 test", "lead"],
-            ["Project (with possible several teams) (operational level)", "lead"]
+            ["Budgetting", "lead"],
+            ["Manage/Lead/coach more then 3 teams (of 5 - 10 people) or 1 test project (with possible several teams) (operational level)", "lead"]
         ],
         "Technical Skills": [
             //GENERAL
             ["Expert Coach in at least 1 domain (your specialisation)", "tester"],
             ["Able to make POC in at least 1 domain (your specialisation)", "tester"],
-            ["Build Domain(s) Expertise (your specialisations - self development: new trends,...)", "tester"],
+            ["Build Domain(s) Expertise (your specialisations - self development: new trends, ...)", "tester"],
 
             //SPECIFIC
             ["Advanced SQL or noSQL db's", "tester"],
@@ -599,7 +592,7 @@ alleDataLevels = [
 
             //SPECIFIC
             ["Able to select Automation Tool", "technical"],
-            ["Set up test automation process (CI/CD, testing pyramid, …)", "technical"]
+            ["Set up test automation process (CI/CD, testing pyramid, ...)", "technical"]
         ],
         "Test Skills": [
             //GENERAL
@@ -613,7 +606,7 @@ alleDataLevels = [
             ["Proposal Writing (content delivery)", "tester"],
             ["Value Based SPIN Selling (solution sales) (customer & colleagues)", "tester"],
             ["Public speaking (domain / expertise on events)", "tester"],
-            ["Solution Architect (trekken van R&D, groep bijeen krijgen om aan dingen te werken, iets organiseren, lead workforces...)", "tester"],
+            ["Solution Architect (trekken van R&D, groep bijeen krijgen om aan dingen te werken, iets organiseren, lead workforces, ...)", "tester"],
             ["Set up Continuous Improvement track (for your teams/small organisations)", "tester"]
         ],
         "Qualifications": [
@@ -639,7 +632,7 @@ alleDataLevels = [
         "Soft Skills": [
             //GENERAL
             ["Organisational Leadership skills (strategic level)", "tester"],
-            ["Change Managment skills (able to solve complex issues & guide organisations to next level)", "tester"],
+            ["Change Management skills (able to solve complex issues & guide organisations to next level)", "tester"],
             ["Intrapreneurship", "tester"],
             ["Stress resilience", "tester"],
             ["Delegation", "tester"],
@@ -690,7 +683,7 @@ alleDataLevels = [
         "Soft Skills": [
             //GENERAL
             ["Negotiation Skills", "tester"],
-            ["Delivery management (opvolgen van projecten bij klanten, implementatie trajecten ...)", "tester"],
+            ["Delivery management (opvolgen van projecten bij klanten, implementatie trajecten, ...)", "tester"],
 
             //SPECIFIC
             ["Lead QA company wide (strategic level)", "lead"],

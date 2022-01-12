@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-        content="initial-scale=1.0, width=device-width, height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- ICON Brightest -->
     <link rel="icon" type="image/png" href="../Assets/Images/brightestIcon.png" />
+
     <!--CSS files-->
-    <link rel="stylesheet" href="../Css/Home.css">
+    <link rel="stylesheet" href="../Css/Index.css">
 
     <!--Nunito (regular 400 google font)-->
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
@@ -20,9 +20,9 @@
 <body>
     <header id="header">
         <h1 id="header-title" class="title-font">Level Tree</h1>
-        <img id="logoBrightest" srcset="../Assets/Images/Logo_Brightest_CMYK_tagline_AIM%20HIGH.png"
-            alt="logo brightest">
+        <img id="logoBrightest" srcset="../Assets/Images/Logo_Brightest_CMYK_tagline_AIM%20HIGH.png" alt="logo brightest">
     </header>
+
     <main class="zoomViewport">
         <div id="container-boom" class="zoomContainer">
 
@@ -34,8 +34,7 @@
 
             <!--TOOLTIPS VAN ALLE LEVELS-->
 
-            <!--TOOLTIPS Test-->
-            <!--
+            <!--TOOLTIPS Test met raster-->
             <div id="tooltipLvTest" data-level="1" class="tooltip tooltipTest zoomTarget" data-targetsize="0.11" data-duration="600">
                 <a href="#popup" class="tooltip__trigger">
                  <p class="title-font">T</p>
@@ -46,7 +45,6 @@
                  </div>
              </div>
              </div>
-            -->
 
             <div id="tooltipLv1" data-level="1" class="tooltip tooltip1 zoomTarget" data-targetsize="0.11"
                 data-duration="600">
@@ -188,21 +186,27 @@
                 <a id="sluitModal" class="popup__close title-font" href="#"
                     onclick="setTimeout(terugNaarStart, 300);">X</a>
 
+                <!--Verticale "Brightest" in de linkerkant van modal-->
                 <div class="popup__photo">
                     <p id="logo-text-modal">brigh<span style="color: white">test</span></p>
-                    <!--
-                <p style="font-size: 40px; letter-spacing: 5px; transform: rotate(-90deg); font-weight: bolder; margin-bottom: 0px; margin-left: 50px;">brigh<span style="color: white">test</span></p>-->
                 </div>
 
+                <!--Alle inhoud rechterkant modal-->
                 <div class="popup__text">
+
+                    <!--Titel modal (naam van het level)-->
                     <h1 id="modal-title">Dit is een test met een raster</h1>
+
+                    <!--subtitle (experience jaren)-->
                     <p id="modal-experience" class="modal-expierence">test</p>
 
+                    <!--Container met alle accorions met de nodige skills per categorie-->
                     <div id="accordion-container" class="accordion-wrapper">
-                        <!--Hier worden alle accordions geladen voor de levels-->
                         <div class="accordion">
                             <input type="radio" name="radio-a" id="check2">
+                            <!--Accordion titel-->
                             <label class="accordion-label" for="check2">Test</label>
+                            <!--Accordion inhoud-->
                             <div class="accordion-content">
                                 <table>
                                     <thead>
@@ -262,9 +266,6 @@
                 <!-- -->
 
             </div>
-
-
-
         </div>
     </div>
     <!--Legende items onderaan de pagina-->
@@ -287,15 +288,13 @@
 
     <!--Link voor de js zoom funcionaliteit-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../Js/Main.js"></script>
+    <script src="../Js/Index.js"></script>
 
     <!--js files voor zoom functionaliteit-->
     <script type="text/javascript" src="../Js/jquery.zoomooz-helpers.js"></script>
     <script type="text/javascript" src="../Js/jquery.zoomooz-anim.js"></script>
     <script type="text/javascript" src="../Js/jquery.zoomooz-core.js"></script>
     <script type="text/javascript" src="../Js/jquery.zoomooz-zoomTarget.js"></script>
-    <script type="text/javascript" src="../Js/jquery.zoomooz-zoomButton.js"></script>
-    <script type="text/javascript" src="../Js/jquery.zoomooz-zoomContainer.js"></script>
     <script type="text/javascript" src="../Js/purecssmatrix.js"></script>
     <script type="text/javascript" src="../Js/sylvester.src.stripped.js"></script>
 </body>
