@@ -19,7 +19,8 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: #ededed;
+/*  background-color: #ededed;*/
+  background-color: white;
   overflow: hidden;
 }
 P {
@@ -323,10 +324,10 @@ footer {
   background-color: #63b330;
 }
 .technical-legende-circle {
-  background-color: red;
+  background-color: #F96600;
 }
 .lead-legende-circle {
-  background-color: blue;
+  background-color: #36A9E1;
 }
 
 /*MODAL met alle data*/
